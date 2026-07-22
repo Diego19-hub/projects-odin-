@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="El Rincón de Diego: comida hecha al momento con ingredientes frescos."
+    />
+    <title>El Rincón de Diego | Restaurante</title>
+  <script defer src="main.js"></script></head>
+
+  <body>
+    <a class="skip-link" href="#content">Saltar al contenido</a>
+
+    <header class="site-header">
+      <nav class="navbar" aria-label="Navegación principal">
+        <a class="brand" href="#inicio" aria-label="El Rincón de Diego, ir al inicio">
+          <span class="brand-mark" aria-hidden="true">RD</span>
+          <span>
+            <strong>El Rincón</strong>
+            <small>de Diego</small>
+          </span>
+        </a>
+
+        <div class="nav-links" role="group" aria-label="Secciones">
+          <button type="button" class="home-button is-active" data-page="home" aria-current="page">
+            Inicio
+          </button>
+          <button type="button" class="menu-button" data-page="menu">
+            Menú
+          </button>
+          <button type="button" class="contact-button" data-page="contact">
+            Contacto
+          </button>
+        </div>
+
+        <a class="nav-cta" href="tel:+523312345678">Reservar mesa</a>
+      </nav>
+    </header>
+
+    <main id="content" tabindex="-1" aria-live="polite">
+      <noscript>
+        <section>
+          <h1>El Rincón de Diego</h1>
+          <p>Activa JavaScript para explorar nuestro menú y datos de contacto.</p>
+        </section>
+      </noscript>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <p class="footer-brand">El Rincón de Diego</p>
+        <p>Comida honesta, momentos memorables.</p>
+      </div>
+      <p>© <span id="current-year">2026</span> El Rincón de Diego.</p>
+    </footer>
+  </body>
+</html>
