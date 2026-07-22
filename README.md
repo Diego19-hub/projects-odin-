@@ -1,1 +1,1 @@
-estos proyectos son de odin_project y aqui alojare todos los projectos que hare 
+estos proyectos son de odin_project y aqui alojare tica tac toe y el proyecto de restaurante 
