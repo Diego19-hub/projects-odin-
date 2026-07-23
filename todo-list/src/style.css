@@ -1,0 +1,76 @@
+:root {
+  color: #191919;
+  background: #eeeeec;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body { margin: 0; min-width: 320px; min-height: 100vh; }
+button, input, textarea, select { font: inherit; }
+button { cursor: pointer; }
+button, input, textarea, select { min-height: 2.75rem; }
+button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible { outline: 3px solid #191919; outline-offset: 2px; }
+
+.header { padding: clamp(1.25rem, 3vw, 2.5rem) clamp(1rem, 5vw, 4rem); background: #191919; color: #fafafa; }
+.header h1 { margin: 0; font-size: clamp(1.7rem, 4vw, 2.5rem); letter-spacing: -0.04em; }
+.header p { margin: .4rem 0 0; color: #c8c8c5; }
+
+.layout { display: grid; grid-template-columns: minmax(13.5rem, 17rem) minmax(0, 1fr); min-height: calc(100vh - 7.5rem); }
+.sidebar { padding: clamp(1rem, 3vw, 2rem); background: #e1e1de; border-right: 1px solid #b8b8b4; }
+.sidebar h2, .main-content h2 { margin: 0; font-size: 1rem; letter-spacing: .08em; text-transform: uppercase; }
+.projects-list { display: grid; gap: .35rem; margin: 1rem 0; }
+.project-button { width: 100%; padding: .7rem .8rem; border: 1px solid transparent; border-radius: .35rem; background: transparent; color: inherit; text-align: left; overflow-wrap: anywhere; }
+.project-button:hover { background: #cececa; }
+.project-button.active { background: #191919; color: #fff; font-weight: 700; }
+
+.main-content { width: min(100%, 78rem); padding: clamp(1.25rem, 4vw, 3rem); }
+.main-content > h2 { margin-bottom: 1.25rem; font-size: clamp(1.1rem, 2vw, 1.35rem); letter-spacing: -.02em; text-transform: none; }
+.todos-container { display: grid; gap: .85rem; }
+
+.todo-card, .todo-form { border: 1px solid #b8b8b4; border-radius: .5rem; background: #fafafa; box-shadow: 3px 3px 0 #b8b8b4; }
+.todo-card { padding: clamp(1rem, 3vw, 1.3rem); border-left: 5px solid #191919; }
+.todo-card.low { border-left-width: 3px; }
+.todo-card.medium { border-left-width: 5px; }
+.todo-card.high { border-left-width: 8px; }
+.todo-card h3 { margin: 0; overflow-wrap: anywhere; }
+.todo-card p { margin: .75rem 0 0; color: #555552; overflow-wrap: anywhere; }
+.due-date { font-size: .9rem; }
+.priority-label { display: inline-block; margin-top: .75rem; padding: .2rem .45rem; border: 1px solid #777773; border-radius: 999px; color: #444441; font-size: .78rem; text-transform: capitalize; }
+.todo-details { margin-top: .75rem; padding-top: .75rem; border-top: 1px solid #d2d2ce; }
+.todo-details p { margin: 0; }
+.todo-top-row { display: flex; align-items: flex-start; gap: .75rem; }
+.todo-top-row input { flex: 0 0 auto; width: 1.15rem; min-height: 1.15rem; margin-top: .15rem; accent-color: #191919; }
+.todo-actions { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1rem; }
+
+.project-form, .todo-form { display: grid; gap: .7rem; }
+.project-form { grid-template-columns: minmax(0, 1fr) auto; margin-top: 1.25rem; }
+.todo-form { max-width: 46rem; padding: clamp(1rem, 3vw, 1.35rem); margin: 0 0 1.5rem; }
+input, textarea, select { width: 100%; padding: .65rem .75rem; border: 1px solid #969692; border-radius: .3rem; background: #fff; color: #191919; }
+textarea { min-height: 6rem; resize: vertical; }
+
+.primary-button, .secondary-button, .delete-button { padding: .6rem .85rem; border: 1px solid #191919; border-radius: .3rem; font-weight: 650; }
+.primary-button { background: #191919; color: #fff; }
+.primary-button:hover { background: #454542; }
+.secondary-button { background: #f1f1ee; color: #191919; }
+.secondary-button:hover { background: #d8d8d4; }
+.delete-button { background: transparent; color: #191919; }
+.delete-button:hover { background: #d0d0cc; }
+.todo-card.completed { opacity: .58; }
+.todo-card.completed h3 { text-decoration: line-through; }
+.empty-message { margin: 0; padding: 1.25rem; border: 1px dashed #969692; color: #555552; text-align: center; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+@media (max-width: 700px) {
+  .layout { grid-template-columns: 1fr; }
+  .sidebar { border-right: 0; border-bottom: 1px solid #b8b8b4; }
+  .projects-list { grid-auto-flow: column; grid-auto-columns: minmax(8.5rem, 1fr); overflow-x: auto; padding-bottom: .25rem; }
+  .project-form { max-width: 32rem; }
+  .main-content { padding: 1.25rem 1rem 2rem; }
+}
+
+@media (max-width: 420px) {
+  .project-form { grid-template-columns: 1fr; }
+  .project-form .primary-button, .todo-form .primary-button { width: 100%; }
+  .todo-actions > button { flex: 1 1 100%; }
+}
