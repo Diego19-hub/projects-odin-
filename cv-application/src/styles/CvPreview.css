@@ -1,0 +1,32 @@
+.cv-preview h2 {
+  margin-top: 0;
+}
+
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  color: #475569;
+}
+
+.contact-info p {
+  margin: 0;
+}
+
+.cv-section {
+  margin-top: 32px;
+}
+
+.cv-section h3 {
+  padding-bottom: 8px;
+  border-bottom: 2px solid #2563eb;
+}
+
+.cv-section article {
+  margin: 18px 0;
+}
+
+.cv-section h4,
+.cv-section p {
+  margin: 4px 0;
+}

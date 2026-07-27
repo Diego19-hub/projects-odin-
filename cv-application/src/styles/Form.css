@@ -1,0 +1,45 @@
+.form-section h2 {
+  margin-top: 0;
+}
+
+input,
+textarea {
+  width: 100%;
+  margin: 6px 0 16px;
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font: inherit;
+}
+
+textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+button {
+  padding: 9px 12px;
+  border: 0;
+  border-radius: 6px;
+  background-color: #2563eb;
+  color: white;
+  cursor: pointer;
+  font: inherit;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.entry-form {
+  margin: 16px 0;
+  padding: 16px;
+  border: 1px solid #dbe3ee;
+  border-radius: 8px;
+}
+
+.delete-button {
+  background-color: #dc2626;
+}
